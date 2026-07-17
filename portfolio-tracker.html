@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Krypto-Portfolio lokal im Browser verwalten, Kostenbasis und unrealisierten Gewinn sehen und CSV-Backups exportieren.">
+<link rel="canonical" href="https://gunnarschuster.com/tools/portfolio-tracker/">
+<title>Krypto Portfolio Tracker | Gunnar Schuster</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="tool-styles.css">
+</head>
+<body data-tool="portfolio">
+<header class="site-header">
+<div class="shell nav">
+<a class="brand" href="index.html">
+<span class="brand-mark">GS</span>
+<span>Gunnar Schuster</span>
+</a>
+<nav class="nav-links">
+<a href="ratgeber.html">Ratgeber</a>
+<a class="active" href="tools.html">Tools</a>
+<a href="kurse.html">Kurse</a>
+</nav>
+<div class="nav-actions">
+<a class="btn" href="start.html">Starte hier</a>
+<button class="icon-btn menu-btn">☰</button>
+</div>
+</div>
+</header>
+<main>
+<section class="page-hero">
+<div class="shell">
+<span class="eyebrow">Lokal im Browser</span>
+<h1 class="display">Portfolio Tracker.<br>
+<em>Überblick ohne Konto.</em>
+</h1>
+<p class="lede">Erfasse einfache Krypto-Positionen, aktualisiere unterstützte Preise über CoinGecko und exportiere ein lokales Backup. Keine Wallet-Verbindung erforderlich.</p>
+<nav class="tool-nav">
+<a href="bitcoin-sparplan-rechner.html">Sparplan</a>
+<a href="bitcoin-renten-rechner.html">Rente</a>
+<a class="active" href="portfolio-tracker.html">Portfolio</a>
+<a href="coin-check.html">Coin Check</a>
+<a href="krypto-steuer-rechner.html">Steuer</a>
+</nav>
+</div>
+</section>
+<section class="section tight">
+<div class="shell">
+<div class="tool-layout">
+<div class="tool-panel">
+<h2 class="subhead">Position hinzufügen</h2>
+<label>Coin</label>
+<select id="symbol">
+<option>BTC</option>
+<option>ETH</option>
+<option>SOL</option>
+<option>XRP</option>
+<option>ADA</option>
+<option>DOGE</option>
+<option>LINK</option>
+</select>
+<label>Menge</label>
+<input id="amount" type="number" value="0.01" step="any">
+<label>Manueller Kurs als Fallback</label>
+<input id="manualPrice" type="number" value="0">
+<button id="addHolding" class="btn" style="margin-top:18px">Position speichern →</button>
+<p class="tool-note">Speicherung ausschließlich im LocalStorage dieses Browsers. Cache-Löschung kann Daten entfernen; regelmäßig CSV exportieren.</p>
+</div>
+<div class="result-panel">
+<div class="result-hero">
+<span>Aktueller Gesamtwert</span>
+<div class="result-value" id="portfolioTotal">–</div>
+<p id="marketStatus">Live-Kurse für unterstützte Coins via CoinGecko.</p>
+</div>
+<div class="tool-actions">
+<button id="exportHoldings" class="btn small ghost">CSV-Backup exportieren</button>
+</div>
+<div class="tool-table-wrap">
+<table class="tool-table">
+<thead>
+<tr>
+<th>Coin</th>
+<th>Menge</th>
+<th>Kurs</th>
+<th>Wert</th>
+<th>
+</th>
+</tr>
+</thead>
+<tbody id="holdings">
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section tight">
+<div class="article-shell">
+<div class="warning-box">
+<strong>Bewusst begrenzter Umfang:</strong> Dieser Tracker ist für einfache Bestände gedacht. Er berechnet keine vollständige FIFO-Historie, DeFi-Positionen, NFTs, Staking-Erträge oder Steuererklärungen. Nutze dafür spezialisierte Software und fachliche Prüfung.</div>
+</div>
+</section>
+</main>
+<script src="app.js">
+</script>
+<script src="tool-suite.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Bitcoin-Ruhestandsszenarien mit Sparrate, Laufzeit, Inflation und theoretischer Entnahme transparent berechnen.">
+<link rel="canonical" href="https://gunnarschuster.com/tools/bitcoin-renten-rechner/">
+<title>Bitcoin Renten-Rechner | Gunnar Schuster</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="tool-styles.css">
+</head>
+<body data-tool="retirement">
+<header class="site-header">
+<div class="shell nav">
+<a class="brand" href="index.html">
+<span class="brand-mark">GS</span>
+<span>Gunnar Schuster</span>
+</a>
+<nav class="nav-links">
+<a href="ratgeber.html">Ratgeber</a>
+<a class="active" href="tools.html">Tools</a>
+<a href="kurse.html">Kurse</a>
+</nav>
+<div class="nav-actions">
+<a class="btn" href="start.html">Starte hier</a>
+<button class="icon-btn menu-btn">☰</button>
+</div>
+</div>
+</header>
+<main>
+<section class="page-hero">
+<div class="shell">
+<span class="eyebrow">Langfristiges Szenario</span>
+<h1 class="display">Bitcoin & Ruhestand.<br>
+<em>Rechne nüchtern.</em>
+</h1>
+<p class="lede">Schätze ein mögliches Kapital und eine theoretische Entnahme. Keine Rendite, Entnahmerate oder steuerliche Behandlung ist garantiert.</p>
+<nav class="tool-nav">
+<a href="bitcoin-sparplan-rechner.html">Sparplan</a>
+<a class="active" href="bitcoin-renten-rechner.html">Rente</a>
+<a href="portfolio-tracker.html">Portfolio</a>
+<a href="coin-check.html">Coin Check</a>
+<a href="krypto-steuer-rechner.html">Steuer</a>
+</nav>
+</div>
+</section>
+<section class="section tight">
+<div class="shell tool-layout" id="tool">
+<div class="tool-panel">
+<h2 class="subhead">Annahmen</h2>
+<div class="input-pair">
+<div>
+<label>Aktuelles Kapital</label>
+<input id="current" type="number" value="5000">
+</div>
+<div>
+<label>Monatlicher Beitrag</label>
+<input id="monthly" type="number" value="200">
+</div>
+</div>
+<label>Jahre bis zum Ziel</label>
+<input id="years" type="number" value="20">
+<label>Jährliche Entwicklung</label>
+<input id="return" type="number" value="8" step="0.5">
+<label>Theoretische jährliche Entnahme</label>
+<input id="withdraw" type="number" value="3" step="0.25">
+<p class="tool-note">2 % jährliche Inflation wird für den heutigen Realwert angenommen. Keine Gebühren oder Steuern.</p>
+</div>
+<div class="result-panel">
+<div class="result-hero">
+<span>Projiziertes Kapital</span>
+<div class="result-value" id="capital">–</div>
+<p>auf Basis gleichmäßiger Rendite.</p>
+</div>
+<div class="metrics">
+<div class="metric">
+<span>Theoretisch pro Monat</span>
+<strong id="monthlyIncome">–</strong>
+</div>
+<div class="metric">
+<span>Gesamt eingezahlt</span>
+<strong id="totalPaid">–</strong>
+</div>
+<div class="metric">
+<span>Heutiger Realwert (2 % Inflation)</span>
+<strong id="realValue">–</strong>
+</div>
+<div class="metric">
+<span>Planungsregel</span>
+<strong>diversifizieren</strong>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section tight">
+<div class="article-shell">
+<div class="warning-box">
+<strong>Kein Rentenplan sollte nur auf Bitcoin beruhen.</strong> Berücksichtige gesetzliche und betriebliche Ansprüche, Liquidität, breit gestreute Anlagen, Steuern, Versicherungen und eine mögliche lange Entnahmephase.</div>
+</div>
+</section>
+</main>
+<script src="app.js">
+</script>
+<script src="tool-suite.js">
+</script>
+</body>
+</html>

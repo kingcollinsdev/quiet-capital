@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Krypto-Transaktionen lokal erfassen, FIFO-Lose und Haltedauer nachvollziehen und Daten zur fachlichen Prüfung exportieren.">
+<link rel="canonical" href="https://gunnarschuster.com/tools/krypto-steuer-rechner/">
+<title>Krypto Steuer-Rechner Deutschland | Gunnar Schuster</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="tool-styles.css">
+</head>
+<body data-tool="tax">
+<header class="site-header">
+<div class="shell nav">
+<a class="brand" href="index.html">
+<span class="brand-mark">GS</span>
+<span>Gunnar Schuster</span>
+</a>
+<nav class="nav-links">
+<a href="ratgeber.html">Ratgeber</a>
+<a class="active" href="tools.html">Tools</a>
+<a href="kurse.html">Kurse</a>
+</nav>
+<div class="nav-actions">
+<a class="btn" href="start.html">Starte hier</a>
+<button class="icon-btn menu-btn">☰</button>
+</div>
+</div>
+</header>
+<main>
+<section class="page-hero">
+<div class="shell">
+<span class="eyebrow">Bildungs-Estimator · Deutschland</span>
+<h1 class="display">Krypto-Steuern.<br>
+<em>Erst ordnen, dann prüfen.</em>
+</h1>
+<p class="lede">Erfasse einfache Käufe und Verkäufe, markiere eine eingegebene Haltedauer und exportiere die Daten für weitere Prüfung. Kein automatischer Steuerbescheid und keine Steuerberatung.</p>
+<nav class="tool-nav">
+<a href="bitcoin-sparplan-rechner.html">Sparplan</a>
+<a href="bitcoin-renten-rechner.html">Rente</a>
+<a href="portfolio-tracker.html">Portfolio</a>
+<a href="coin-check.html">Coin Check</a>
+<a class="active" href="krypto-steuer-rechner.html">Steuer</a>
+</nav>
+</div>
+</section>
+<section class="section tight">
+<div class="shell">
+<div class="warning-box">
+<strong>Wichtige Grenze:</strong> Der Estimator führt keine automatische FIFO-Loszuordnung durch. Kostenbasis und Haltedauer werden von dir eingegeben. Coin-zu-Coin-Tausch, Staking, Airdrops, Mining, DeFi und betriebliche Fälle benötigen gesonderte Prüfung.</div>
+<div class="tool-layout">
+<div class="tool-panel">
+<h2 class="subhead">Transaktion</h2>
+<div class="input-pair">
+<div>
+<label>Datum</label>
+<input id="txDate" type="date" value="2026-07-17">
+</div>
+<div>
+<label>Typ</label>
+<select id="txType">
+<option value="buy">Kauf</option>
+<option value="sell">Verkauf</option>
+</select>
+</div>
+</div>
+<div class="input-pair">
+<div>
+<label>Coin</label>
+<input id="txCoin" value="BTC">
+</div>
+<div>
+<label>Menge</label>
+<input id="txAmount" type="number" value="0.01" step="any">
+</div>
+</div>
+<label>Gesamtwert / Erlös in EUR</label>
+<input id="txTotal" type="number" value="1000">
+<label>Zugeordnete Kostenbasis in EUR (bei Verkauf)</label>
+<input id="txCost" type="number" value="0">
+<label>Haltedauer in Tagen (bei Verkauf)</label>
+<input id="txDays" type="number" value="0">
+<button id="addTx" class="btn" style="margin-top:18px">Transaktion hinzufügen →</button>
+<p class="tool-note">Daten bleiben in diesem Browser. Exportiere ein Backup, bevor du Browserdaten löschst.</p>
+</div>
+<div class="result-panel">
+<div class="result-hero">
+<span>Einfach geschätzter Gewinn unter 365 Tagen</span>
+<div class="result-value" id="taxableGain">–</div>
+<p id="threshold">–</p>
+</div>
+<div class="tool-actions">
+<button id="exportTax" class="btn small ghost">CSV für weitere Prüfung</button>
+</div>
+<div class="tool-table-wrap">
+<table class="tool-table">
+<thead>
+<tr>
+<th>Datum</th>
+<th>Typ</th>
+<th>Coin</th>
+<th>Menge</th>
+<th>Wert</th>
+<th>Status</th>
+<th>
+</th>
+</tr>
+</thead>
+<tbody id="transactions">
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section tight">
+<div class="article-shell article-body">
+<h2>Was dieser Wert bedeutet</h2>
+<p>Der angezeigte Betrag summiert positive und negative Differenzen zwischen Erlös und der von dir eingetragenen Kostenbasis für Verkäufe mit weniger als 365 Tagen Haltedauer. Andere private Veräußerungsgeschäfte, Gebühren, Verlustverrechnung und individuelle Sonderfälle sind nicht vollständig berücksichtigt.</p>
+<div class="source-box">
+<h2>Vor Verwendung prüfen</h2>
+<p>Rechtsstand und Einzelfall anhand des aktuellen <a href="https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Steuerarten/Einkommensteuer/2025-03-06-einzelfragen-kryptowerte-bmf-schreiben.pdf">BMF-Schreibens</a> und mit einer steuerberatenden Person klären.</p>
+</div>
+</div>
+</section>
+</main>
+<script src="app.js">
+</script>
+<script src="tool-suite.js">
+</script>
+</body>
+</html>

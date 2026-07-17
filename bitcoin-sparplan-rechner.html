@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Bitcoin-Sparplan kostenlos simulieren: monatliche oder wöchentliche Käufe, Szenarien und historische CoinGecko-Daten.">
+<link rel="canonical" href="https://gunnarschuster.com/tools/bitcoin-sparplan-rechner/">
+<title>Bitcoin Sparplan Rechner | Gunnar Schuster</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="tool-styles.css">
+</head>
+<body data-tool="savings">
+<header class="site-header">
+<div class="shell nav">
+<a class="brand" href="index.html">
+<span class="brand-mark">GS</span>
+<span>Gunnar Schuster</span>
+</a>
+<nav class="nav-links">
+<a href="ratgeber.html">Ratgeber</a>
+<a class="active" href="tools.html">Tools</a>
+<a href="kurse.html">Kurse</a>
+</nav>
+<div class="nav-actions">
+<a class="btn" href="start.html">Starte hier</a>
+<button class="icon-btn menu-btn">☰</button>
+</div>
+</div>
+</header>
+<main>
+<section class="page-hero">
+<div class="shell">
+<span class="eyebrow">Kostenlos · lokal berechnet</span>
+<h1 class="display">Bitcoin Sparplan<br>
+<em>Szenario-Rechner.</em>
+</h1>
+<p class="lede">Teste monatliche Beträge und Renditeannahmen. Eine Projektion ist keine Prognose; Bitcoin kann dauerhaft unter den Annahmen bleiben oder vollständig an Wert verlieren.</p>
+<nav class="tool-nav">
+<a class="active" href="bitcoin-sparplan-rechner.html">Sparplan</a>
+<a href="bitcoin-renten-rechner.html">Rente</a>
+<a href="portfolio-tracker.html">Portfolio</a>
+<a href="coin-check.html">Coin Check</a>
+<a href="krypto-steuer-rechner.html">Steuer</a>
+</nav>
+</div>
+</section>
+<section class="section tight">
+<div class="shell tool-layout" id="tool">
+<div class="tool-panel">
+<h2 class="subhead">Dein Szenario</h2>
+<label for="monthly">Monatlicher Betrag</label>
+<input id="monthly" type="number" value="100" min="0">
+<label for="years">Laufzeit in Jahren</label>
+<input id="years" type="number" value="10" min="1" max="40">
+<label for="return">Angenommene jährliche Entwicklung</label>
+<select id="return">
+<option value="-10">–10 % defensives Stressszenario</option>
+<option value="0">0 % keine Entwicklung</option>
+<option value="5">5 % moderates Szenario</option>
+<option value="10" selected>10 % optimistisches Szenario</option>
+<option value="20">20 % sehr optimistisches Szenario</option>
+</select>
+<p class="tool-note">Monatliche Einzahlung am Periodenanfang; monatliche Verzinsung aus der gewählten Jahresrate. Gebühren, Steuern und Inflation nicht enthalten.</p>
+</div>
+<div class="result-panel">
+<div class="result-hero">
+<span>Projizierter Endwert</span>
+<div class="result-value" id="future">–</div>
+<p>Mathematisches Szenario, kein erwarteter Bitcoin-Wert.</p>
+</div>
+<div class="metrics">
+<div class="metric">
+<span>Einzahlungen</span>
+<strong id="paid">–</strong>
+</div>
+<div class="metric">
+<span>Rechnerische Entwicklung</span>
+<strong id="growth">–</strong>
+</div>
+<div class="metric">
+<span>Jahresannahme</span>
+<strong id="assumption">–</strong>
+</div>
+<div class="metric">
+<span>Anteil Einzahlungen</span>
+<div class="bar">
+<i id="growthbar">
+</i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section tight">
+<div class="article-shell article-body">
+<h2>So liest du das Ergebnis</h2>
+<p>Der Rechner zeigt die Wirkung einer konstanten mathematischen Rate. Reale Bitcoin-Kurse verlaufen nicht gleichmäßig. Teste deshalb auch 0 % und negative Szenarien und vergleiche das Ergebnis mit einem breit gestreuten ETF sowie deiner Liquiditätsreserve.</p>
+<div class="warning-box">Nutze kein Geld, das du kurzfristig benötigst. Ein Sparplan reduziert Timing-Druck, nicht das Verlustrisiko.</div>
+</div>
+</section>
+</main>
+<script src="app.js">
+</script>
+<script src="tool-suite.js">
+</script>
+</body>
+</html>

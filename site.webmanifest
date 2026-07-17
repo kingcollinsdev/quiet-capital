@@ -1,0 +1,9 @@
+{
+  "name": "Gunnar Schuster Research Notes",
+  "short_name": "GS Research",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4eddf",
+  "theme_color": "#181714",
+  "icons": [{"src":"favicon.svg","sizes":"any","type":"image/svg+xml"}]
+}
