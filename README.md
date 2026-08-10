@@ -1,70 +1,88 @@
-# Gunnar Schuster Website Redesign
+# Quiet Capital
 
-Static, responsive website prototype for Gunnar Schuster's Bitcoin and crypto education platform.
+A course-and-content platform for a crypto educator — video library, tools, and weekly analysis pages, built around a simple idea: clarity over hype, with real audience numbers instead of promises.
 
-## Open in VS Code
 
-1. Download or clone this repository.
-2. In VS Code, choose **File → Open Folder** and select this folder.
-3. Open the integrated terminal.
-4. Run:
+## Screenshots
 
+<img width="1920" height="869" alt="ScreenShot Tool -20260810095146" src="https://github.com/user-attachments/assets/a6befdfd-e1c4-4c51-a8fd-297d7243764c" />
+
+
+
+
+
+## Features
+
+- Feature 1: You can view all of the courses offered by Gunnar. 
+- Feature 2: You can use all of the free tools offered by Gunnar.
+- Feature 3: You can view his Youtube channel and all of the resources he offers.
+- Responsive design
+- Cross-browser compatible
+
+## Technologies Used
+
+- **HTML5** - Structure and content
+- **CSS3** - Styling and layout
+- **JavaScript** - Interactivity and functionality
+
+## Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
+git@github.com:kingcollinsdev/quiet-capital.git
 ```
 
-5. Open `http://localhost:8765`.
-
-If Node.js is unavailable, use Python:
-
+2. Navigate to the project directory:
 ```bash
-python -m http.server 8765
+cd quiet-capital
 ```
 
-## Push to GitHub
-
+3. Open `index.html` in your browser or use a local server:
 ```bash
-git init
-git add .
-git commit -m "Initial Gunnar Schuster website redesign"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-git push -u origin main
+# Using Python 3
+python -m http.server 8000
+
+# Using Node.js (http-server)
+npx http-server
 ```
 
-## Deploy with GitHub Pages
+## Usage
+This validates the URL making sure it meets the requirements to be saved
 
-This repository includes a GitHub Actions workflow.
 
-1. Open the repository on GitHub.
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment**, select **GitHub Actions**.
-4. Push to `main`, or manually run the Pages workflow.
+```javascript
+// Example code snippet
+ if(!url.startsWith("http://") && !url.startsWith("https://")) {
+            alert("Please enter a valid URL starting with http:// or https://");
+            return
+```
 
-Your site will be available at:
+## Project Structure
 
-`https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`
+```
+project-name/
+│
+├── index.html          # Main HTML file
+├── css/
+│   └── style.css       # Main stylesheet
+├── js/
+│   └── script.js       # Main JavaScript file
+├── images/             # Image assets
+└── README.md           # Project documentation
+```
 
-## Important before a real launch
+## Browser Support
 
-- Gunnar must approve every first-person statement.
-- Replace placeholder/repeated videos with the final curated videos.
-- Connect newsletter, checkout, contact, analytics and consent systems.
-- Review tax and financial content professionally.
-- Replace automatic translation with reviewed `/en/` pages.
-- Update canonical URLs, `robots.txt` and `sitemap.xml` for the final domain.
-- Complete legal, privacy and security review.
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-## Architecture
 
-- `index.html` — homepage
-- `styles.css` — shared visual system
-- `app.js` — navigation, animations, filters and language control
-- `tool-styles.css` — tool interface styles
-- `tool-suite.js` — calculators, CoinGecko requests, local storage, FIFO and CSV logic
-- `ratgeber.html` — content hub
-- `tools.html` — tools hub
-- `kurse.html` — courses
-- `ueber.html` — About page
+## Contact
 
-This is a review build, not a certified financial, tax or legal product.
+Your Name - Collins Wachira - collinswachira2004@gmail.com
+
+Project Link: [https://quiet-capital-sigma.vercel.app/](https://github.com/kingcollinsdev/quiet-capital.git)
+
+
